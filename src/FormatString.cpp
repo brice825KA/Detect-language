@@ -1,5 +1,18 @@
 #include "../include/language.hpp"
 
+
+bool recursive_exist_in_string(char *sent, char letter, int &pos) {
+    if (!sent)
+        return false;
+    else if (sent[pos] != letter && sent[pos + 1]) {
+        pos += 1;
+        recursive_exist_in_string(sent, letter, pos);
+    }
+    else if (sent[pos] == letter)
+        return true;
+    return false;
+}
+
 bool exist_in_string(char *sent, char letter) {
     if (!sent)
         return false;
