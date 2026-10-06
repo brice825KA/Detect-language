@@ -1,3 +1,5 @@
 #! /bin/bash
 
-echo 'Begin Test'
+echo '====== Begin Test Binary ======'
+
+
