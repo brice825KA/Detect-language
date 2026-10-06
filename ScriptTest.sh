@@ -23,3 +23,8 @@ if [[ "$OUTPUT" != $'a: 4 (6.897%)' ]]; then
 else
     echo "First Test Success";
 fi
+
+echo '==== Unit Test ===='
+OUTPUT=$(make unittest)
+eval ./test
+make fclean
