@@ -28,8 +28,8 @@ char *string_remove_doublons(char **argv, int lenght) {
     format[0] = argv[2][0];
     auto j = 0;
     for (auto i = 2; argv[i]; i += 1) {
-        if (strlen(argv[i]) > 2)
-            break;
+        if (strlen(argv[i]) > 1)
+            continue;
         bool exist = exist_in_string(format, argv[i][0]);
         if (exist == 0) {
             j++;
